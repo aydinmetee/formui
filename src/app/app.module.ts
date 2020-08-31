@@ -3,14 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {ButtonModule, InputTextModule} from "primeng";
+import {PasswordModule} from 'primeng/password';
+import {CommonModule} from "@angular/common";
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    FormsModule,
+    PasswordModule,
+    ButtonModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
