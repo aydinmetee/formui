@@ -1,0 +1,11 @@
+<div *ngFor="let product of products">
+  <p-card header="Product Name : {{product.pname}}" [style]="{width: '18rem'}" styleClass="p-card-shadow">
+    <p-header>
+        <img src={{product.pimg}}>
+    </p-header>
+    <p>Price : {{product.price | currency}}</p>
+    <ng-template pTemplate="footer">
+        <p-button label="Add to chart" icon="pi pi-check" (click)="addToCart(product)"></p-button>
+    </ng-template>
+</p-card>
+</div>

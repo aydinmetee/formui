@@ -1,0 +1,20 @@
+<div *ngIf="items == null">
+  
+    <p>Sepetinizde hiç ürün yok.Ürün eklemek için devam edin.</p>
+    <a href="/product">Mağazaya dön.</a>
+
+    
+</div>
+<div *ngFor="let product of items">
+  <p-card
+    header="{{ product.pname }}"
+    [style]="{ width: '18rem' }"
+    styleClass="p-card-shadow"
+  >
+    <p-header>
+      <img src="{{ product.pimg }}" />
+    </p-header>
+    <p>{{ product.price }}</p>
+    <ng-template pTemplate="footer"> </ng-template>
+  </p-card>
+</div>
